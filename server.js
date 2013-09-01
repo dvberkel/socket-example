@@ -6,6 +6,9 @@ var io = require('socket.io').listen(server);
 server.listen(8080);
 
 app.use('/static', express.static(__dirname + '/public'));
+app.get('/', function(request, response){
+    response.redirect('/static/');
+});
 
 var viewers = {};
 
