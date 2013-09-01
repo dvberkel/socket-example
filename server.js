@@ -3,7 +3,7 @@ var app = express();
 var server = require('http').createServer(app);
 var io = require('socket.io').listen(server);
 
-server.listen(2345);
+server.listen(8080);
 
 app.use('/static', express.static(__dirname + '/public'));
 
